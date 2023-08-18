@@ -16,11 +16,12 @@ import com.reynoso.experimentwithvariants.ui.theme.ExperimentWithVariantsTheme
 
 class MainActivity : ComponentActivity() {
 
-    val launcher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
-            result ->
-        val resultFromActivity =  result.data?.getBundleExtra("tal")
+    val launcher =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            val resultFromActivity = result.data?.getBundleExtra("tal")
 
-    }
+        }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -121,12 +122,13 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
+                    println(resources.getIdentifier("baseline_supervised_user_circle_24","drawable",packageName))
                     Greeting("Android")
                 }
             }
         }
 
-        launcher.launch(Intent(""))
+        //launcher.launch(Intent(""))
 
     }
 }

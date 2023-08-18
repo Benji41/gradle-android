@@ -75,7 +75,8 @@ android {
             )
 
             //static variable which changes by build type
-            buildConfigField("String", "BASE_URL", "www.google.com")
+            buildConfigField("String", "BASE_URL", "\"www.google.com\"")
+            signingConfig = signingConfigs.getByName("debug")
         }
 
         getByName("debug") {
