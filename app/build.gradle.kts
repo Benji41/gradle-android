@@ -1,4 +1,3 @@
-import java.rmi.server.UID
 import java.util.UUID
 
 
@@ -9,7 +8,7 @@ plugins {
 }
 
 //set the tool chain by function, contains java compiler used to build any java source code, also runs the kotlin compiler
-kotlin{
+kotlin {
     jvmToolchain(17)
 }
 
@@ -20,9 +19,9 @@ android {
 
     compileSdk =
         33 // specifies the android API level, gradle should use to compile the app (means you can use the api features in this API and lower)
-            //enables new functionality but dosent brake the current behavior of already produced app.
-            //thats why always has to be the highest sdk to ensure new features are available and
-            // still remain compatible to older versions.
+    //enables new functionality but dosent brake the current behavior of already produced app.
+    //thats why always has to be the highest sdk to ensure new features are available and
+    // still remain compatible to older versions.
 
 
     ///encapsulates default settings and entries for all build variants.
@@ -39,7 +38,7 @@ android {
 
 
         */
-        targetSdk = 31
+        targetSdk = 33
 
         versionCode = 1 //defines the version number of the app
         versionName = "1.0" //user-friendly version name of the app
@@ -75,7 +74,6 @@ android {
             )
 
         }
-
         //custom build type
         create("dev") {
             applicationIdSuffix = ".dev"
@@ -118,20 +116,6 @@ android {
         }
     }
 
-
-
-
-
-
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17 //determines which java language features are available during compilation
-        targetCompatibility = JavaVersion.VERSION_17 //specifying both target compatibility and jvm target
-        // determines the java class-format version used when generating bytecode for compiled java and kotlin source, respectively
-    }
-    kotlinOptions {
-        jvmTarget = "17" // source code for target (test)
-        //this set of  java versioning does not affect in which jdk is used to run the gradle itself.
-    }
     buildFeatures {
         compose = true
         buildConfig = true
