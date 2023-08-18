@@ -61,6 +61,7 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+        manifestPlaceholders
     }
 
     //developer facing attributes which represent stages of development
