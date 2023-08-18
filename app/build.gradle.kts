@@ -17,11 +17,19 @@ android {
     namespace =
         "com.reynoso.experimentwithvariants" //app name space. used primarily to access app resources
 
-    compileSdk =
-        33 // specifies the android API level, gradle should use to compile the app (means you can use the api features in this API and lower)
-    //enables new functionality but dosent brake the current behavior of already produced app.
-    //thats why always has to be the highest sdk to ensure new features are available and
-    // still remain compatible to older versions.
+
+    /*
+        property to tell compiler which version of the android build tools to use to generate
+        an app bundle or apk.
+
+        incrementing the number of the version will unlock new APIs and unlock new behaviors that
+        google releases with each new version of the build tools.
+
+        also with each new release they'll also occasionally deprecated and remove older apis that you
+        may have used in a previous version of the build tools.
+
+    */
+    compileSdk = 33
 
 
     ///encapsulates default settings and entries for all build variants.
@@ -32,10 +40,16 @@ android {
 
 
         /*
-            specifies the api level used to be design and test the app, the current version of android to test the app
-            the set of api tools that are defined on the target sdk are the same ones used by newer api version, instead of our code updating to be
-            compatible with a newer api version.
+            is information that is passed along to google play to indicate the maximum version of
+            Android that you've tested an guaranteed your application against.
 
+            this isn't upper celling, so if a new version of android releases right now, they would be able
+            to still download the app even if it targets a lower sdk version.
+
+
+            basically saying that we have tested our app to the min sdk all the way up to the target sdk.
+
+            any version of above that range we cant guarantee proper performance or quality.
 
         */
         targetSdk = 33
