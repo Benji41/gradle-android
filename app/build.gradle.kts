@@ -61,7 +61,7 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
-        manifestPlaceholders
+        manifestPlaceholders["screenOrientation"] = "unspecified"
     }
 
     //developer facing attributes which represent stages of development
@@ -82,6 +82,8 @@ android {
         getByName("debug") {
             applicationIdSuffix = ".debug"
             isDebuggable = true
+            manifestPlaceholders["theme"] = "@style/Theme.AppCompat.DayNight.DarkActionBar"
+
 
             buildConfigField(
                 "String",
@@ -93,7 +95,7 @@ android {
         //custom build type
         create("dev") {
             applicationIdSuffix = ".dev"
-
+            manifestPlaceholders["screenOrientation"] = "portrait"
             buildConfigField(
                 "String",
                 "BASE_URL",
@@ -122,12 +124,15 @@ android {
                 name = "UID",
                 value = "\"${UUID.randomUUID()}\""
             )
+            manifestPlaceholders["hostName"] = "wwww.paid-reynoso.com"
         }
 
         create("paid") {
             dimension = "features"
             applicationIdSuffix = ".paid"
             versionNameSuffix = "-paid"
+            manifestPlaceholders["hostName"] = "wwww.free-reynoso.com"
+
 
         }
     }

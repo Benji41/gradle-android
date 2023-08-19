@@ -3,6 +3,7 @@
     <application>
         <activity
             android:name="com.reynoso.dev.MainActivity"
+            android:screenOrientation="${screenOrientation}"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

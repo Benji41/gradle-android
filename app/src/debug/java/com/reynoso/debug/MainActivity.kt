@@ -28,6 +28,7 @@ class MainActivity : ComponentActivity() {
         //you can access buildconfig file on the variants as well
         println(BuildConfig.UID)
         println(BuildConfig.BASE_URL)
+        println(theme)
         setContent { 
             ExperimentWithVariantsTheme {
                 Surface(
