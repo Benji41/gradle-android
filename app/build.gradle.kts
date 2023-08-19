@@ -5,12 +5,13 @@ plugins {
     id("com.android.application") //applies the android gradle plugin, to the module and lets us use the android block.
     id("org.jetbrains.kotlin.android") // enables kotlin support for android development
     id("com.google.devtools.ksp") // enables ksp processor
+    id("io.gitlab.arturbosch.detekt") //enables detekt code analyzer
 }
 
 //set the tool chain by function, contains java compiler used to build any java source code, also runs the kotlin compiler
-kotlin {
+/*kotlin {
     jvmToolchain(17)
-}
+}*/
 
 //configure all android specific build options, which dont come by default for gradle(enabled by the plugin).
 android {
@@ -137,6 +138,13 @@ android {
         }
     }
 
+    compileOptions{
+        targetCompatibility = JavaVersion.VERSION_17 //determines the java class-format version
+        sourceCompatibility =JavaVersion.VERSION_17 //features available during compilation
+    }
+    kotlinOptions{
+        jvmTarget = "17"
+    }
     buildFeatures {
         compose = true
         buildConfig = true
