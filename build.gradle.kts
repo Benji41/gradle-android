@@ -10,4 +10,7 @@ plugins {
     id("io.gitlab.arturbosch.detekt") version "1.23.1" //to execute it have to run the following command
     // on the terminal -> ./gradlew detekt
 
+    //firebase plugin to be used within the project
+    id("com.google.gms.google-services") version "4.3.15" apply false
+
 }
