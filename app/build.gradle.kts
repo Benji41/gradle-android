@@ -174,6 +174,8 @@ dependencies {
     implementation("androidx.navigation:navigation-compose:2.7.0")
 
     //shared remote dependencies
+    implementation("androidx.activity:activity-ktx:1.7.2")
+    implementation("androidx.fragment:fragment-ktx:1.6.1")
     implementation("com.facebook.shimmer:shimmer:0.5.0")
     implementation("androidx.core:core-ktx:1.10.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")

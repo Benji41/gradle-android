@@ -118,7 +118,7 @@ fun Login(analytics: FirebaseAnalytics, navigateToHome: () -> Unit) {
             text = AnnotatedString("Olvidaste tu contrasenia?"),
             onClick = {
                       analytics.logEvent("olvido_contrasenia"){
-                          param("usuario",email.text)
+                          param("usuario","forgot_password")
                       }
             },
             style = TextStyle(
