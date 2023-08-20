@@ -7,9 +7,67 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:516215249895:android:a1dfb94d3e67043f2c7b42",
+        "mobilesdk_app_id": "1:516215249895:android:d98729c5082233fb2c7b42",
         "android_client_info": {
-          "package_name": "com.reynoso.experimentwithvariants"
+          "package_name": "com.reynoso.experimentwithvariants.free"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "516215249895-cgrmoteuqpftabq5op3avkm9ht48kd72.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAquI74ELC_stPz_tAG1yHmRR2VwZgtjw4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "516215249895-cgrmoteuqpftabq5op3avkm9ht48kd72.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:516215249895:android:547442208cfee3482c7b42",
+        "android_client_info": {
+          "package_name": "com.reynoso.experimentwithvariants.free.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "516215249895-cgrmoteuqpftabq5op3avkm9ht48kd72.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAquI74ELC_stPz_tAG1yHmRR2VwZgtjw4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "516215249895-cgrmoteuqpftabq5op3avkm9ht48kd72.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:516215249895:android:7b8b354c7a8eea9f2c7b42",
+        "android_client_info": {
+          "package_name": "com.reynoso.experimentwithvariants.free.dev"
         }
       },
       "oauth_client": [

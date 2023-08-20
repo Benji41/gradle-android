@@ -6,6 +6,7 @@ plugins {
     id("org.jetbrains.kotlin.android") // enables kotlin support for android development
     id("com.google.devtools.ksp") // enables ksp processor
     id("io.gitlab.arturbosch.detekt") //enables detekt code analyzer
+    id("com.google.gms.google-services")// we add the plugin to this app module
 }
 
 //set the tool chain by function, contains java compiler used to build any java source code, also runs the kotlin compiler
@@ -30,7 +31,7 @@ android {
         may have used in a previous version of the build tools.
 
     */
-    compileSdk = 33
+    compileSdk = 34
 
 
     ///encapsulates default settings and entries for all build variants.
@@ -160,16 +161,21 @@ android {
 }
 
 dependencies {
-
+    //firebase dependencies
+    implementation(platform("com.google.firebase:firebase-bom:32.2.2"))
+    implementation("com.google.firebase:firebase-analytics-ktx")
     //annotation processor
     ksp("androidx.room:room-compiler:2.5.2")
 
     //remote dependency for the debug build type
     //camel case prefix of the build type or variant type of dependency with first letter upper case.
     "debugImplementation"("com.airbnb.android:lottie:6.1.0")
-
+    //compose navigation
+    implementation("androidx.navigation:navigation-compose:2.7.0")
 
     //shared remote dependencies
+    implementation("androidx.activity:activity-ktx:1.7.2")
+    implementation("androidx.fragment:fragment-ktx:1.6.1")
     implementation("com.facebook.shimmer:shimmer:0.5.0")
     implementation("androidx.core:core-ktx:1.10.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
